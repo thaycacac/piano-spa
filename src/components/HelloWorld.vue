@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content">
     <ul>
       <li class="white KeyA"></li>
       <li class="black KeyW"></li>
@@ -97,6 +97,9 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.content {
+  margin-top: 150px;
+}
 main {
   text-align: center;
 }
