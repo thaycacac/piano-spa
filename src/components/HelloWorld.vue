@@ -21,20 +21,19 @@
       <li class="black"></li>
       <li class="white"></li>
     </ul>
-    <audio class="keyA" src="../assets/E4.mp3"></audio>
+    <audio id="KeyA">
+      <source src="../assets/e4.mp3" type="audio/mpeg">
+    </audio>
   </div>
 </template>
 
 <script>
 export default {
-  mounted(){
-    window.addEventListener('keydown', (e) => {
-      const audio = document.querySelector('.keyA')
-      console.log(audio);
-      if(!audio) return;
-      audio.currentTime = 0
-      audio.play()
-    })
+  mounted() {
+    window.addEventListener("keydown", e => {
+      const audio = document.getElementById(e.code); 
+      audio.play();
+    });
   }
 };
 </script>
